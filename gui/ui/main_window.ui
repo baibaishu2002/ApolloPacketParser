@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::WindowModality::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Apollo 数据包解析工具</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="lineEditPacketPath">
+    <property name="geometry">
+     <rect>
+      <x>96</x>
+      <y>6</y>
+      <width>905</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditOutputDir">
+    <property name="geometry">
+     <rect>
+      <x>96</x>
+      <y>37</y>
+      <width>905</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSelectPacket">
+    <property name="geometry">
+     <rect>
+      <x>1006</x>
+      <y>6</y>
+      <width>85</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>选择</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSelectOutput">
+    <property name="geometry">
+     <rect>
+      <x>1006</x>
+      <y>37</y>
+      <width>86</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>选择</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnParseChannel">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>67</y>
+      <width>103</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>解析Channel</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnParseMessage">
+    <property name="geometry">
+     <rect>
+      <x>119</x>
+      <y>67</y>
+      <width>103</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>解析Message</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnExportCSV">
+    <property name="geometry">
+     <rect>
+      <x>234</x>
+      <y>67</y>
+      <width>103</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>导出CSV</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPacketPath">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>6</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>数据包路径：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelOutputDir">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>37</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>输出文件夹：</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxChannel">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>99</y>
+      <width>398</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Channel 列表</string>
+    </property>
+    <widget class="QListWidget" name="listWidgetChannel">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>24</y>
+       <width>388</width>
+       <height>552</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxMessage">
+    <property name="geometry">
+     <rect>
+      <x>411</x>
+      <y>99</y>
+      <width>681</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Message 字段（第一帧）</string>
+    </property>
+    <widget class="QTreeWidget" name="treeWidgetMessage">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>24</y>
+       <width>671</width>
+       <height>552</height>
+      </rect>
+     </property>
+     <property name="headerHidden">
+      <bool>true</bool>
+     </property>
+     <column>
+      <property name="text">
+       <string notr="true">1</string>
+      </property>
+     </column>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btnExportJPG">
+    <property name="geometry">
+     <rect>
+      <x>349</x>
+      <y>67</y>
+      <width>103</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>导出JPG</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnExportPCD">
+    <property name="geometry">
+     <rect>
+      <x>464</x>
+      <y>67</y>
+      <width>103</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>导出PCD</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1100</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionSelectPacket"/>
+    <addaction name="actionSelectOutput"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionExit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="actionexit">
+   <property name="text">
+    <string>exit</string>
+   </property>
+  </action>
+  <action name="actionSelectPacket">
+   <property name="text">
+    <string>选择数据包</string>
+   </property>
+  </action>
+  <action name="actionSelectOutput">
+   <property name="text">
+    <string>选择输出路径</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
